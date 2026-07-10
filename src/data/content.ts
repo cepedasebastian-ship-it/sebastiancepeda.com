@@ -173,10 +173,10 @@ export const t = {
       heading: 'Wer ich bin',
       portraitAlt: 'Sebastian Cepeda',
       paragraphs: [
-        'Ich bin Produzent und Executive Producer, arbeite zwischen Zürich und Madrid und bin offen für Projekte weltweit. Ich entwickle und begleite Projekte von der ersten Idee bis zu dem Moment, in dem sie ihr Publikum erreichen: Spielfilme, Serien, Dokumentationen, Werbespots, Kurzfilme, Musikvideos und Markenfilme.',
-        'Als Third Culture Kid – geboren in Buenos Aires, mit Stationen in Deutschland, der Schweiz und Spanien – habe ich über 50 Länder bereist. Diese Perspektive prägt alles, was ich mache: Geschichten über unterschiedliche Leben, unterschiedliche Stimmen – und unterschiedliche Arten, sie zu erzählen. Meine Projekte liefen bei Netflix, Amazon Prime Video und Apple TV+ sowie bei Sendern wie SRF und ProSieben.',
-        'Ich habe in vielen Gewerken gearbeitet – Produktion, Regie, Kamera, Schnitt, Farbkorrektur und Drehbuch. Deshalb bewege ich mich auf Augenhöhe mit jedem Department: Ich kann führen und mich zugleich auf das einstellen, was ein Team oder eine Kundin gerade braucht.',
-        'Über die Jahre habe ich gelernt: Gutes Produzieren beruht vor allem auf Vertrauen, Gespür und Verlässlichkeit. Genau das bringe ich an jeden Tisch.',
+        'Ich bin Produzent und Executive Producer, zu Hause in Zürich und Madrid und weltweit tätig. Ich entwickle und begleite Projekte von der ersten Idee bis zur Veröffentlichung: Spielfilme, Serien, Dokumentationen, Werbespots, Kurzfilme, Musikvideos und Markenfilme.',
+        'Als Third Culture Kid – geboren in Buenos Aires, gelebt in Deutschland, der Schweiz und Spanien – habe ich über 50 Länder bereist. Diese Perspektive prägt alles, was ich mache: Geschichten über unterschiedliche Leben und Stimmen – und über neue Wege, sie zu erzählen. Meine Projekte liefen bei Netflix, Amazon Prime Video und Apple TV+ sowie bei SRF und ProSieben.',
+        'Ich habe in vielen Gewerken gearbeitet – Produktion, Regie, Kamera, Schnitt, Farbkorrektur und Drehbuch. Deshalb verstehe ich jedes Gewerk von innen: Ich kann führen und mich zugleich darauf einstellen, was ein Team oder eine Kundin gerade braucht.',
+        'Über die Jahre habe ich gelernt: Gutes Produzieren beruht vor allem auf Vertrauen, Gespür und Verlässlichkeit. Genau das bringe ich in jedes Projekt ein.',
       ],
       personal: [
         'Multikulturell von Natur aus – ich arbeite auf Spanisch, Englisch, Deutsch, Französisch und Italienisch.',
