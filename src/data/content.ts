@@ -23,20 +23,18 @@ export const privacyHrefs: Record<Locale, string> = {
 export const shared = {
   name: 'Sebastian Cepeda',
   email: 'cepeda.sebastian@gmail.com',
-  locations: ['Zurich', 'Madrid'],
+  locations: ['Zurich', 'Madrid'], // used for schema.org address
   portrait: '/portrait.jpg',
   social: [
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/sebasti%C3%A1n-cepeda-41404836/' },
     { label: 'IMDb', href: 'https://www.imdb.com/name/nm3173222/' },
   ],
   clients: ['UBS', 'Siemens', 'Porsche', 'ON Running', 'FIFA', 'Philips', 'Franke', 'V-ZUG', 'Swarovski', 'Kanebo'],
-  // Company name + link is shared; the place / description is translated in `t`.
   companyLinks: [
     { name: 'Entropía Studios', href: 'https://www.entropia-studios.com' },
     { name: 'Viven Film', href: 'https://www.vivenfilm.ch' },
     { name: 'Viven AG', href: 'https://www.viven.ch' },
   ],
-  // Project title + image is shared; format / role / year is translated in `t.work`.
   workBase: [
     { title: 'Las Heras', image: '/work/las-heras.jpg' },
     { title: 'The Last Lap', image: '/work/the-last-lap.jpg' },
@@ -50,7 +48,6 @@ export const shared = {
     { title: 'Open World', image: '/work/open-world.avif' },
     { title: 'Loch Ness', image: '/work/loch-ness.jpg' },
   ],
-  // Institution is shared; degree / detail is translated in `t.education`.
   eduBase: [{ institution: 'ECAM — Madrid Film School' }, { institution: 'Middlesex University' }],
 };
 
@@ -69,6 +66,7 @@ export const t = {
       'Sebastian Cepeda — producer and executive producer working across film, television, documentary and brand storytelling between Zurich and Madrid.',
     availability: 'Open worldwide',
     basedIn: 'Based in',
+    cities: ['Zurich', 'Madrid'],
     heroFormats: 'Film · Series · Documentary · Brand',
     heroScroll: 'Scroll',
     cta: { work: 'Selected work', contact: 'Get in touch' },
@@ -159,11 +157,12 @@ export const t = {
   de: {
     langName: 'Deutsch',
     role: 'Produzent & Executive Producer',
-    tagline: 'Filme, Serien, Dokumentationen und Markengeschichten, die Grenzen überschreiten.',
+    tagline: 'Filme, Serien, Dokumentationen und Markenfilme, die Grenzen überschreiten.',
     seoDescription:
-      'Sebastian Cepeda — Produzent und Executive Producer für Film, Fernsehen, Dokumentation und Markengeschichten, zwischen Zürich und Madrid.',
-    availability: 'Weltweit verfügbar',
-    basedIn: 'Ansässig in',
+      'Sebastian Cepeda — Produzent und Executive Producer für Film, Fernsehen, Dokumentation und Markenfilme, zwischen Zürich und Madrid.',
+    availability: 'Weltweit tätig',
+    basedIn: 'Zwischen',
+    cities: ['Zürich', 'Madrid'],
     heroFormats: 'Film · Serie · Dokumentation · Marke',
     heroScroll: 'Scrollen',
     cta: { work: 'Ausgewählte Arbeiten', contact: 'Kontakt' },
@@ -174,33 +173,33 @@ export const t = {
       heading: 'Wer ich bin',
       portraitAlt: 'Sebastian Cepeda',
       paragraphs: [
-        'Ich bin Produzent und Executive Producer, arbeite zwischen Zürich und Madrid und bin offen für Projekte weltweit. Ich entwickle und führe Projekte von der ersten Idee bis zu dem Moment, in dem sie ihr Publikum erreichen: Spielfilme, Serien, Dokumentationen, Werbespots, Kurzfilme, Musikvideos und Markenfilme.',
-        'Als Third Culture Kid – geboren in Buenos Aires, mit Stationen in Deutschland, der Schweiz und Spanien – habe ich über 50 Länder bereist. Diese Perspektive steht im Zentrum dessen, was ich mache: Geschichten über unterschiedliche Leben, unterschiedliche Stimmen und unterschiedliche Arten, sie zu erzählen. Meine Projekte liefen bei Netflix, Amazon Prime Video und Apple TV+ sowie bei Sendern wie SRF und ProSieben.',
-        'Ich habe in vielen Gewerken gearbeitet – Produktion, Regie, Kamera, Schnitt, Farbkorrektur und Drehbuch – und fühle mich deshalb im Gespräch mit allen zu Hause: Ich kann anleiten und mich auf das einstellen, was ein Team oder eine Kundin braucht.',
-        'Über die Jahre habe ich gelernt, dass gutes Produzieren vor allem auf Vertrauen, Gespür und Verlässlichkeit beruht. Das versuche ich an jeden Tisch zu bringen.',
+        'Ich bin Produzent und Executive Producer, arbeite zwischen Zürich und Madrid und bin offen für Projekte weltweit. Ich entwickle und begleite Projekte von der ersten Idee bis zu dem Moment, in dem sie ihr Publikum erreichen: Spielfilme, Serien, Dokumentationen, Werbespots, Kurzfilme, Musikvideos und Markenfilme.',
+        'Als Third Culture Kid – geboren in Buenos Aires, mit Stationen in Deutschland, der Schweiz und Spanien – habe ich über 50 Länder bereist. Diese Perspektive prägt alles, was ich mache: Geschichten über unterschiedliche Leben, unterschiedliche Stimmen – und unterschiedliche Arten, sie zu erzählen. Meine Projekte liefen bei Netflix, Amazon Prime Video und Apple TV+ sowie bei Sendern wie SRF und ProSieben.',
+        'Ich habe in vielen Gewerken gearbeitet – Produktion, Regie, Kamera, Schnitt, Farbkorrektur und Drehbuch. Deshalb bewege ich mich auf Augenhöhe mit jedem Department: Ich kann führen und mich zugleich auf das einstellen, was ein Team oder eine Kundin gerade braucht.',
+        'Über die Jahre habe ich gelernt: Gutes Produzieren beruht vor allem auf Vertrauen, Gespür und Verlässlichkeit. Genau das bringe ich an jeden Tisch.',
       ],
       personal: [
         'Multikulturell von Natur aus – ich arbeite auf Spanisch, Englisch, Deutsch, Französisch und Italienisch.',
-        'Ein „Otrovert“ – extrovertiert, wenn es sein muss, introvertiert von Natur aus.',
+        'Ein „Otrovert“: extrovertiert, wenn es sein muss – introvertiert von Natur aus.',
         'Ein tiefes Gespräch ist mir lieber als Small Talk.',
         'Abseits des Sets: Natur, Fotografie und ein gutes Buch.',
-        'Besessen vom Handwerk: immer zuerst die Geschichte.',
+        'Besessen vom Handwerk: Am Anfang steht immer die Geschichte.',
       ],
     },
     servicesLabel: 'Was ich mache',
     services: [
-      { title: 'Executive Production', body: 'Projekte strukturieren, finanzieren und steuern – von der Entwicklung bis zur Auslieferung, damit Vision und Budget an einem Strang ziehen.' },
-      { title: 'Produktion', body: 'Praxisnahe Produktion von Film, Fernsehen und Dokumentation – das richtige Team für jede Geschichte zusammenstellen und führen.' },
-      { title: 'Development', body: 'Stoffe finden und entwickeln, Talente zusammenbringen und die Partnerschaften aufbauen, die ein Projekt möglich machen.' },
-      { title: 'Marke & Corporate', body: 'Filme, die wirklich etwas bewirken – Employer Branding, Produkt- und Markengeschichten, gebaut für Reichweite und Wirkung.' },
+      { title: 'Executive Production', body: 'Projekte strukturieren, finanzieren und steuern – von der Entwicklung bis zur Auslieferung, damit die Vision trägt und das Budget hält.' },
+      { title: 'Produktion', body: 'Praxisnahe Produktion für Film, Fernsehen und Dokumentation – das richtige Team für jede Geschichte zusammenstellen und führen.' },
+      { title: 'Development', body: 'Stoffe finden und entwickeln, Talente zusammenbringen und die Partnerschaften aufbauen, die ein Projekt erst möglich machen.' },
+      { title: 'Marke & Corporate', body: 'Filme, die etwas bewegen – Employer Branding, Produkt- und Markenfilme, gemacht für Reichweite und Wirkung.' },
     ],
     approachLabel: 'Wie ich arbeite',
     approachIntro:
-      'Technisch und kreativ von Natur aus – meine Erfahrung hat mich beide Seiten einer Produktion verstehen lassen, ohne Logistik und Budget aus den Augen zu verlieren.',
+      'Technisch und kreativ zugleich – ich verstehe beide Seiten einer Produktion, ohne Logistik und Budget aus den Augen zu verlieren.',
     strengths: [
       { title: 'Verhandlung', body: 'Über 22 Jahre im Vertrieb – ich weiß, wie man ein Projekt finanziert und einen Deal abschließt.' },
-      { title: 'Führung', body: 'Das richtige Team aufbauen und es unter Druck ruhig steuern.' },
-      { title: 'Menschen zuerst', body: 'Wer auf die Menschen achtet, sieht es am Ergebnis auf der Leinwand.' },
+      { title: 'Führung', body: 'Das richtige Team aufbauen – und es auch unter Druck ruhig auf Kurs halten.' },
+      { title: 'Der Mensch im Mittelpunkt', body: 'Wer gut mit Menschen umgeht, sieht das Ergebnis auf der Leinwand.' },
     ],
     workLabel: 'Ausgewählte Arbeiten',
     work: [
@@ -220,7 +219,7 @@ export const t = {
     companies: [
       { place: 'Madrid', body: 'Film- und Fernsehproduktion – kreative Inhalte für Spielfilme, Serien und Dokumentationen.' },
       { place: 'Zürich · Madrid', body: 'Internationale fiktionale und dokumentarische Produktion mit multikultureller Perspektive.' },
-      { place: 'Zürich', body: 'Corporate- und Markenfilme, die wirklich wirken – mit dem erzählerischen Anspruch eines Filmemachers.' },
+      { place: 'Zürich', body: 'Corporate- und Markenfilme mit spürbarer Wirkung – erzählt mit dem Anspruch eines Filmemachers.' },
     ],
     clientsLabel: 'Kunden',
     educationLabel: 'Ausbildung',
@@ -231,25 +230,25 @@ export const t = {
     contactLabel: 'Kontakt',
     contact: {
       headline: 'Machen wir etwas, das man sehen will.',
-      intro: 'Ein Projekt, ein Drehbuch oder einfach eine Idee, die es wert ist? Ich höre gern davon.',
+      intro: 'Ein Projekt, ein Drehbuch oder eine Idee, die erzählt werden will? Schreiben Sie mir.',
     },
     privacy: {
       title: 'Datenschutz & Daten',
       updated: 'Zuletzt aktualisiert im Juli 2026',
-      lead: 'Diese Website respektiert deine Privatsphäre. Sie setzt keine Cookies, zeigt keine Werbung und versucht nie, dich zu identifizieren oder im Netz zu verfolgen. Hier steht genau, was bei deinem Besuch passiert.',
+      lead: 'Diese Website respektiert Ihre Privatsphäre. Sie setzt keine Cookies, zeigt keine Werbung und versucht nie, Sie zu identifizieren oder im Netz zu verfolgen. Hier steht genau, was bei Ihrem Besuch passiert.',
       sections: [
-        { h: 'Analyse', body: 'Ich nutze Cloudflare Web Analytics, einen datenschutzfreundlichen, cookielosen Dienst. Er misst nur anonyme, aggregierte Informationen – etwa Seitenaufrufe, das Herkunftsland eines Besuchs und die verweisende Seite. Er verwendet keine Cookies, erstellt keinen Geräte-Fingerabdruck und kann dich nicht identifizieren oder über andere Websites hinweg verfolgen.' },
-        { h: 'Cookies', body: 'Diese Website speichert keine Cookies auf deinem Gerät. Deshalb siehst du auch kein Cookie-Banner – es gibt nichts, dem du zustimmen müsstest.' },
-        { h: 'Wenn du mir schreibst', body: 'Wenn du dich unter cepeda.sebastian@gmail.com meldest, nutze ich deine Nachricht und Kontaktdaten ausschließlich, um dir zu antworten. Ich setze dich auf keine Verteilerliste und gebe deine Daten an niemanden weiter.' },
+        { h: 'Analyse', body: 'Ich nutze Cloudflare Web Analytics, einen datenschutzfreundlichen, cookielosen Dienst. Er misst nur anonyme, aggregierte Informationen – etwa Seitenaufrufe, das Herkunftsland eines Besuchs und die verweisende Seite. Er verwendet keine Cookies, erstellt keinen Geräte-Fingerabdruck und kann Sie nicht identifizieren oder über andere Websites hinweg verfolgen.' },
+        { h: 'Cookies', body: 'Diese Website speichert keine Cookies auf Ihrem Gerät. Deshalb sehen Sie auch kein Cookie-Banner – es gibt nichts, dem Sie zustimmen müssten.' },
+        { h: 'Wenn Sie mir schreiben', body: 'Wenn Sie sich unter cepeda.sebastian@gmail.com melden, nutze ich Ihre Nachricht und Kontaktdaten ausschließlich, um Ihnen zu antworten. Ich setze Sie auf keine Verteilerliste und gebe Ihre Daten an niemanden weiter.' },
         { h: 'Hosting', body: 'Die Website wird bei Netlify gehostet, das – wie jeder Webhost – technische Standard-Logs (etwa IP-Adressen) verarbeiten kann, um Seiten auszuliefern und die Website sicher zu halten. Diese Logs werden nicht zur Profilbildung genutzt.' },
-        { h: 'Deine Rechte', body: 'Nach schweizerischem (revDSG) und EU-Recht (DSGVO) hast du Rechte an allen dich betreffenden personenbezogenen Daten. Da diese Website keine Besucherprofile erstellt, gibt es kaum etwas zu veranlassen – bei Fragen zum Datenschutz schreib mir einfach an cepeda.sebastian@gmail.com, ich helfe gern.' },
+        { h: 'Ihre Rechte', body: 'Nach schweizerischem (revDSG) und EU-Recht (DSGVO) haben Sie Rechte an allen Sie betreffenden personenbezogenen Daten. Da diese Website keine Besucherprofile erstellt, gibt es kaum etwas zu veranlassen – bei Fragen zum Datenschutz schreiben Sie mir einfach an cepeda.sebastian@gmail.com, ich helfe gern.' },
       ],
       back: '← Zurück zur Startseite',
     },
   },
 
   // ===========================================================================
-  // ESPAÑOL
+  // ESPAÑOL (rioplatense / argentino — voseo)
   // ===========================================================================
   es: {
     langName: 'Español',
@@ -259,6 +258,7 @@ export const t = {
       'Sebastian Cepeda — productor y productor ejecutivo de cine, televisión, documental e historias de marca, entre Zúrich y Madrid.',
     availability: 'Disponible en todo el mundo',
     basedIn: 'Con base en',
+    cities: ['Zúrich', 'Madrid'],
     heroFormats: 'Cine · Series · Documental · Marca',
     heroScroll: 'Deslizá',
     cta: { work: 'Trabajos', contact: 'Contacto' },

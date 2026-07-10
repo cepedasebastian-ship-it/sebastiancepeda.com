@@ -19,7 +19,7 @@ const education = shared.eduBase.map((e, i) => ({ ...e, ...t.education[i] }));
       <a class="btn btn--ghost" href="#contact">{t.cta.contact}</a>
     </div>
     <div class="hero__meta">
-      <span>{t.basedIn} {shared.locations.join(' & ')} · {t.availability}</span>
+      <span>{t.basedIn} {t.cities.join(' & ')} · {t.availability}</span>
       <span class="dot" aria-hidden="true">•</span>
       <span>{t.heroFormats}</span>
     </div>
