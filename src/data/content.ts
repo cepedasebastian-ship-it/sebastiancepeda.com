@@ -260,7 +260,7 @@ export const t = {
     availability: 'Disponible en todo el mundo',
     basedIn: 'Con base en',
     heroFormats: 'Cine · Series · Documental · Marca',
-    heroScroll: 'Desliza',
+    heroScroll: 'Deslizá',
     cta: { work: 'Trabajos', contact: 'Contacto' },
     nav: { about: 'Sobre mí', work: 'Trabajos', companies: 'Empresas', contact: 'Contacto' },
     navCta: 'Contacto',
@@ -295,7 +295,7 @@ export const t = {
     strengths: [
       { title: 'Negociación', body: 'Más de 22 años en ventas: sé cómo financiar un proyecto y cerrar un trato.' },
       { title: 'Liderazgo', body: 'Formar el equipo adecuado y conducirlo con calma bajo presión.' },
-      { title: 'Las personas primero', body: 'Cuida a la gente y el resultado se nota en la pantalla.' },
+      { title: 'Las personas primero', body: 'Cuidá a la gente y el resultado se nota en la pantalla.' },
     ],
     workLabel: 'Trabajos seleccionados',
     work: [
@@ -326,18 +326,18 @@ export const t = {
     contactLabel: 'Contacto',
     contact: {
       headline: 'Hagamos algo que valga la pena ver.',
-      intro: '¿Tienes un proyecto, un guion o simplemente una idea que valga la pena? Me encantaría escucharla.',
+      intro: '¿Tenés un proyecto, un guion o simplemente una idea que valga la pena? Me encantaría escucharla.',
     },
     privacy: {
       title: 'Privacidad y datos',
       updated: 'Última actualización: julio de 2026',
-      lead: 'Este sitio está hecho para respetar tu privacidad. No usa cookies, no muestra anuncios y nunca intenta identificarte ni seguirte por la web. Esto es exactamente lo que pasa cuando lo visitas.',
+      lead: 'Este sitio está hecho para respetar tu privacidad. No usa cookies, no muestra anuncios y nunca intenta identificarte ni seguirte por la web. Esto es exactamente lo que pasa cuando lo visitás.',
       sections: [
         { h: 'Analítica', body: 'Uso Cloudflare Web Analytics, un servicio respetuoso con la privacidad y sin cookies. Solo mide información anónima y agregada —como páginas vistas, el país desde el que llega una visita y desde qué sitio te derivaron—. No usa cookies, no genera una huella de tu dispositivo y no puede identificarte ni seguirte por otras webs.' },
         { h: 'Cookies', body: 'Este sitio no almacena ninguna cookie en tu dispositivo. Por eso no ves ningún banner de cookies: no hay nada que consentir.' },
-        { h: 'Si me escribes', body: 'Si me contactas a cepeda.sebastian@gmail.com, uso tu mensaje y tus datos solo para responderte. No te agrego a ninguna lista de correo ni comparto tu información con nadie.' },
+        { h: 'Si me escribís', body: 'Si me contactás a cepeda.sebastian@gmail.com, uso tu mensaje y tus datos solo para responderte. No te agrego a ninguna lista de correo ni comparto tu información con nadie.' },
         { h: 'Alojamiento', body: 'El sitio está alojado en Netlify que, como cualquier hosting, puede procesar registros técnicos estándar (como direcciones IP) para servir las páginas y mantener el sitio seguro. Esos registros no se usan para perfilar a los visitantes.' },
-        { h: 'Tus derechos', body: 'Según la ley suiza (nLPD) y de la UE (RGPD), tienes derechos sobre cualquier dato personal que te concierna. Como este sitio no crea perfiles de visitantes, hay muy poco sobre lo que actuar, pero si tienes cualquier duda sobre privacidad, escríbeme a cepeda.sebastian@gmail.com y con gusto te ayudo.' },
+        { h: 'Tus derechos', body: 'Según la ley suiza (nLPD) y de la UE (RGPD), tenés derechos sobre cualquier dato personal que te concierna. Como este sitio no crea perfiles de visitantes, hay muy poco sobre lo que actuar, pero si tenés cualquier duda sobre privacidad, escribime a cepeda.sebastian@gmail.com y con gusto te ayudo.' },
       ],
       back: '← Volver al inicio',
     },
