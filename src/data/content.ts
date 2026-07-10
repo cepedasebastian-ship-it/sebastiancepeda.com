@@ -111,13 +111,13 @@ export const work: Project[] = [
   { title: 'The Last Lap', year: 'In production', format: 'Series', role: 'Executive Producer / Producer', image: '/work/the-last-lap.jpg' },
   { title: 'Foodball', year: 'In development', format: 'Series', role: 'Executive Producer / Producer', image: '/work/foodball.jpg' },
   { title: 'You and Everything Else', year: '2025', format: 'Series', role: 'Producer', image: '/work/you-and-everything-else.jpg' },
-  { title: 'Villa Malaga', year: '2024', format: 'Documentary', role: 'Producer', image: '/work/villa-malaga.avif' },
-  { title: 'NCCR Robotics', year: '2023', format: 'Documentary', role: 'Producer', image: '/work/nccr-robotics.avif' },
-  { title: 'Singularity', year: '2017', format: 'Feature Film', role: 'Producer', image: '/work/singularity.avif' },
-  { title: 'Himmelfahrtskommando', year: '2013', format: 'Feature Film', role: 'Producer', image: '/work/himmelfahrtskommando.avif' },
-  { title: 'Body Hunters', year: 'In development', format: 'Series', role: 'Producer', image: '/work/body-hunters.jpg' },
-  { title: 'Open World', year: 'In development', format: 'Documentary', role: 'Producer', image: '/work/open-world.avif' },
-  { title: 'Loch Ness', year: 'In financing', format: 'Short', role: 'Producer', image: '/work/loch-ness.jpg' },
+  { title: 'Villa Malaga', year: '2024', format: 'Documentary', role: 'Executive Producer', image: '/work/villa-malaga.avif' },
+  { title: 'NCCR Robotics', year: '2023', format: 'Documentary', role: 'Executive Producer', image: '/work/nccr-robotics.avif' },
+  { title: 'Singularity', year: '2017', format: 'Feature Film', role: 'Producer, Screenwriter, DP, Colorist', image: '/work/singularity.avif' },
+  { title: 'Himmelfahrtskommando', year: '2013', format: 'Feature Film', role: 'Producer, DP, Editor, Colorist', image: '/work/himmelfahrtskommando.avif' },
+  { title: 'Body Hunters', year: 'In development', format: 'Series', role: 'Executive Producer', image: '/work/body-hunters.jpg' },
+  { title: 'Open World', year: 'In development', format: 'Documentary', role: 'Executive Producer', image: '/work/open-world.avif' },
+  { title: 'Loch Ness', year: 'In financing', format: 'Short', role: 'Executive Producer', image: '/work/loch-ness.jpg' },
 ];
 
 // -----------------------------------------------------------------------------
