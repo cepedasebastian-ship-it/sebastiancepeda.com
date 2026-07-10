@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-label="Portrait placeholder">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#161618"/>
+      <stop offset="1" stop-color="#0d0d0f"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#g)"/>
+  <!-- simple figure silhouette -->
+  <g fill="none" stroke="#3a3a3f" stroke-width="2">
+    <circle cx="300" cy="330" r="78"/>
+    <path d="M175 640 c0 -95 56 -150 125 -150 s125 55 125 150"/>
+  </g>
+  <text x="300" y="726" text-anchor="middle" fill="#5a5a60"
+        font-family="Georgia, 'Times New Roman', serif" font-size="26" font-style="italic">Your portrait here</text>
+  <text x="300" y="758" text-anchor="middle" fill="#3f3f45"
+        font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="13" letter-spacing="2">DROP A PHOTO IN /public</text>
+</svg>

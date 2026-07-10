@@ -1,0 +1,4 @@
+# Netlify deploy config — drag-and-drop or connect the repo, this is all you need.
+[build]
+  command = "npm run build"
+  publish = "dist"
