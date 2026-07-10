@@ -2,3 +2,11 @@
 [build]
   command = "npm run build"
   publish = "dist"
+
+# Force the default *.netlify.app address to redirect to the real domain,
+# so only sebastiancepeda.com is used publicly.
+[[redirects]]
+  from = "https://sebastiancepedacom.netlify.app/*"
+  to = "https://sebastiancepeda.com/:splat"
+  status = 301
+  force = true
