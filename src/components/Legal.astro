@@ -1,0 +1,69 @@
+---
+const { t, homeHref = '/' } = Astro.props;
+const p = t.privacy;
+---
+
+<section class="section legal">
+  <div class="wrap legal__wrap">
+    <p class="section__label">{t.privacyLabel}</p>
+    <h1 class="legal__title">{p.title}</h1>
+    <p class="legal__updated">{p.updated}</p>
+
+    <p class="legal__lead">{p.lead}</p>
+
+    {
+      p.sections.map((s) => (
+        <div class="legal__section">
+          <h2>{s.h}</h2>
+          <p>{s.body}</p>
+        </div>
+      ))
+    }
+
+    <p class="legal__back"><a href={homeHref}>{p.back}</a></p>
+  </div>
+</section>
+
+<style>
+  .legal__wrap {
+    max-width: 680px;
+  }
+  .legal__title {
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    margin: 0.4rem 0 0.6rem;
+  }
+  .legal__updated {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    margin: 0 0 2.5rem;
+  }
+  .legal__lead {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+    line-height: 1.5;
+    color: var(--text);
+    margin: 0 0 2.5rem;
+  }
+  .legal h2 {
+    font-size: 1.15rem;
+    margin: 2.2rem 0 0.6rem;
+  }
+  .legal p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin: 0 0 1rem;
+  }
+  .legal__back {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+  .legal__back a {
+    text-decoration: none;
+    color: var(--text-muted);
+  }
+  .legal__back a:hover {
+    color: var(--text);
+  }
+</style>

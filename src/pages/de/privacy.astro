@@ -1,9 +1,9 @@
 ---
-import Base from '../layouts/Base.astro';
-import Legal from '../components/Legal.astro';
-import { t, privacyHrefs, homeHrefs } from '../data/content';
+import Base from '../../layouts/Base.astro';
+import Legal from '../../components/Legal.astro';
+import { t, privacyHrefs, homeHrefs } from '../../data/content';
 
-const lang = 'en';
+const lang = 'de';
 ---
 
 <Base lang={lang} t={t[lang]} alternates={privacyHrefs} title={`${t[lang].privacy.title} — Sebastian Cepeda`}>

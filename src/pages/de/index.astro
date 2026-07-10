@@ -1,0 +1,11 @@
+---
+import Base from '../../layouts/Base.astro';
+import Portfolio from '../../components/Portfolio.astro';
+import { t, homeHrefs } from '../../data/content';
+
+const lang = 'de';
+---
+
+<Base lang={lang} t={t[lang]} alternates={homeHrefs}>
+  <Portfolio t={t[lang]} />
+</Base>

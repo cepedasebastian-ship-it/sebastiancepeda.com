@@ -1,59 +1,71 @@
 ---
 import '../styles/global.css';
-import { site, companies } from '../data/content';
+import { shared, locales, localeLabels, homeHrefs, privacyHrefs } from '../data/content';
 
-const { title = `${site.name} — ${site.role}`, description = site.seoDescription } = Astro.props;
+const { lang = 'en', t, alternates = homeHrefs, title, description } = Astro.props;
+
+const homeHref = homeHrefs[lang];
+const privacyHref = privacyHrefs[lang];
+
+const pageTitle = title ?? `${shared.name} — ${t.role}`;
+const pageDesc = description ?? t.seoDescription;
 
 const siteUrl = Astro.site?.href ?? 'https://sebastiancepeda.com/';
-const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
+const canonicalUrl = new URL(alternates[lang], siteUrl).href;
 const ogImage = new URL('/portrait.jpg', siteUrl).href;
 
 // schema.org Person — helps SEO and how AI / search engines understand who you are.
 const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  name: site.name,
-  jobTitle: site.role,
-  description: site.seoDescription,
-  url: siteUrl,
+  name: shared.name,
+  jobTitle: t.role,
+  description: pageDesc,
+  url: canonicalUrl,
   image: ogImage,
-  email: `mailto:${site.email}`,
-  worksFor: companies.map((c) => ({ '@type': 'Organization', name: c.name, url: c.href })),
-  address: site.locations.map((l) => ({ '@type': 'PostalAddress', addressLocality: l })),
-  sameAs: site.social.map((s) => s.href),
+  email: `mailto:${shared.email}`,
+  worksFor: shared.companyLinks.map((c) => ({ '@type': 'Organization', name: c.name, url: c.href })),
+  address: shared.locations.map((l) => ({ '@type': 'PostalAddress', addressLocality: l })),
+  sameAs: shared.social.map((s) => s.href),
   knowsLanguage: ['Spanish', 'English', 'German', 'French', 'Italian'],
+  inLanguage: lang,
 };
 
 const nav = [
-  { label: 'About', href: '/#about' },
-  { label: 'Work', href: '/#work' },
-  { label: 'Companies', href: '/#companies' },
-  { label: 'Contact', href: '/#contact' },
+  { label: t.nav.about, href: `${homeHref}#about` },
+  { label: t.nav.work, href: `${homeHref}#work` },
+  { label: t.nav.companies, href: `${homeHref}#companies` },
+  { label: t.nav.contact, href: `${homeHref}#contact` },
 ];
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
 
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <meta name="author" content={site.name} />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDesc} />
+    <meta name="author" content={shared.name} />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href={canonicalUrl} />
 
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    {locales.map((loc) => (
+      <link rel="alternate" hreflang={loc} href={new URL(alternates[loc], siteUrl).href} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={new URL(alternates.en, siteUrl).href} />
+
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDesc} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:site_name" content={site.name} />
+    <meta property="og:site_name" content={shared.name} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDesc} />
     <meta name="twitter:image" content={ogImage} />
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -79,11 +91,27 @@ const nav = [
   <body>
     <header class="nav">
       <div class="wrap nav__inner">
-        <a class="nav__brand" href="/">{site.name}</a>
+        <a class="nav__brand" href={homeHref}>{shared.name}</a>
         <nav class="nav__links">
           {nav.map((n) => <a href={n.href}>{n.label}</a>)}
         </nav>
-        <a class="nav__cta" href="/#contact">Get in touch</a>
+        <div class="nav__right">
+          <div class="lang-switch" aria-label="Language">
+            {
+              locales.map((loc) => (
+                <a
+                  href={alternates[loc]}
+                  hreflang={loc}
+                  class={loc === lang ? 'is-active' : ''}
+                  aria-current={loc === lang ? 'true' : undefined}
+                >
+                  {localeLabels[loc]}
+                </a>
+              ))
+            }
+          </div>
+          <a class="nav__cta" href={`${homeHref}#contact`}>{t.navCta}</a>
+        </div>
       </div>
     </header>
 
@@ -93,11 +121,11 @@ const nav = [
 
     <footer class="footer">
       <div class="wrap footer__inner">
-        <span>© {new Date().getFullYear()} {site.name}</span>
-        <span class="footer__meta">{site.locations.join(' · ')}</span>
+        <span>© {new Date().getFullYear()} {shared.name}</span>
+        <span class="footer__meta">{shared.locations.join(' · ')}</span>
         <span class="footer__links">
-          <a href={`mailto:${site.email}`}>{site.email}</a>
-          <a href="/privacy">Privacy</a>
+          <a href={`mailto:${shared.email}`}>{shared.email}</a>
+          <a href={privacyHref}>{t.privacyLabel}</a>
         </span>
       </div>
     </footer>
@@ -142,6 +170,28 @@ const nav = [
       .nav__links a:hover {
         color: var(--text);
       }
+      .nav__right {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .lang-switch {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+        font-size: 0.78rem;
+        letter-spacing: 0.05em;
+      }
+      .lang-switch a {
+        color: var(--text-dim);
+        transition: color 0.25s ease;
+      }
+      .lang-switch a:hover {
+        color: var(--text-muted);
+      }
+      .lang-switch a.is-active {
+        color: var(--text);
+      }
       .nav__cta {
         font-size: 0.82rem;
         letter-spacing: 0.02em;
@@ -150,10 +200,16 @@ const nav = [
         border-radius: 999px;
         color: var(--text);
         transition: background 0.25s ease, color 0.25s ease;
+        white-space: nowrap;
       }
       .nav__cta:hover {
         background: var(--text);
         color: var(--bg);
+      }
+      @media (max-width: 460px) {
+        .nav__cta {
+          display: none;
+        }
       }
       @media (min-width: 760px) {
         .nav__links {
