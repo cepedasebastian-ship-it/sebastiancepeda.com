@@ -1,0 +1,115 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/content';
+
+const updated = 'July 2026';
+---
+
+<Base
+  title={`Privacy — ${site.name}`}
+  description="How this site handles data. No cookies, no tracking, no personal profiling — just anonymous, aggregate analytics."
+>
+  <section class="section legal">
+    <div class="wrap legal__wrap">
+      <p class="section__label">Privacy</p>
+      <h1 class="legal__title">Privacy &amp; data</h1>
+      <p class="legal__updated">Last updated {updated}</p>
+
+      <p class="legal__lead">
+        This site is built to respect your privacy. It sets no cookies, shows no ads, and never
+        tries to identify you or follow you around the web. Here’s exactly what happens when you
+        visit.
+      </p>
+
+      <h2>Analytics</h2>
+      <p>
+        I use <a href="https://www.cloudflare.com/web-analytics/" target="_blank" rel="noopener">Cloudflare
+        Web Analytics</a>, a privacy-first, <strong>cookieless</strong> service. It measures only
+        anonymous, aggregate information — such as page views, the country a visit comes from, and
+        which site referred you. It does <strong>not</strong> use cookies, does not fingerprint your
+        device, and cannot identify you or track you across other websites.
+      </p>
+
+      <h2>Cookies</h2>
+      <p>
+        This site stores <strong>no cookies</strong> on your device. That’s why you won’t see a
+        cookie banner — there’s nothing to consent to.
+      </p>
+
+      <h2>If you email me</h2>
+      <p>
+        If you reach out at <a href={`mailto:${site.email}`}>{site.email}</a>, I use your message and
+        contact details only to reply to you. I don’t add you to any mailing list and I don’t share
+        your information with anyone.
+      </p>
+
+      <h2>Hosting</h2>
+      <p>
+        The site is hosted on Netlify, which — like any web host — may process standard technical
+        request logs (such as IP addresses) to serve pages and keep the site secure. These logs are
+        not used to profile visitors.
+      </p>
+
+      <h2>Your rights</h2>
+      <p>
+        Under Swiss (nFADP) and EU (GDPR) data-protection law you have rights over any personal data
+        relating to you. Since this site doesn’t build visitor profiles, there’s very little to act
+        on — but if you have any question about privacy here, just write to
+        <a href={`mailto:${site.email}`}>{site.email}</a> and I’ll be glad to help.
+      </p>
+
+      <p class="legal__back"><a href="/">← Back to home</a></p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .legal__wrap {
+    max-width: 680px;
+  }
+  .legal__title {
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    margin: 0.4rem 0 0.6rem;
+  }
+  .legal__updated {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    margin: 0 0 2.5rem;
+  }
+  .legal__lead {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+    line-height: 1.5;
+    color: var(--text);
+    margin: 0 0 2.5rem;
+  }
+  .legal h2 {
+    font-size: 1.15rem;
+    margin: 2.2rem 0 0.6rem;
+  }
+  .legal p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin: 0 0 1rem;
+  }
+  .legal a {
+    color: var(--text);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--border-strong);
+    transition: text-decoration-color 0.25s ease;
+  }
+  .legal a:hover {
+    text-decoration-color: var(--text);
+  }
+  .legal__back {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+  .legal__back a {
+    text-decoration: none;
+    color: var(--text-muted);
+  }
+</style>

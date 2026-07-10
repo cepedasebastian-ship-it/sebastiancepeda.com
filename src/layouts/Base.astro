@@ -25,10 +25,10 @@ const personSchema = {
 };
 
 const nav = [
-  { label: 'About', href: '#about' },
-  { label: 'Work', href: '#work' },
-  { label: 'Companies', href: '#companies' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'About', href: '/#about' },
+  { label: 'Work', href: '/#work' },
+  { label: 'Companies', href: '/#companies' },
+  { label: 'Contact', href: '/#contact' },
 ];
 ---
 
@@ -79,11 +79,11 @@ const nav = [
   <body>
     <header class="nav">
       <div class="wrap nav__inner">
-        <a class="nav__brand" href="#top">{site.name}</a>
+        <a class="nav__brand" href="/">{site.name}</a>
         <nav class="nav__links">
           {nav.map((n) => <a href={n.href}>{n.label}</a>)}
         </nav>
-        <a class="nav__cta" href="#contact">Get in touch</a>
+        <a class="nav__cta" href="/#contact">Get in touch</a>
       </div>
     </header>
 
@@ -95,7 +95,10 @@ const nav = [
       <div class="wrap footer__inner">
         <span>© {new Date().getFullYear()} {site.name}</span>
         <span class="footer__meta">{site.locations.join(' · ')}</span>
-        <a href={`mailto:${site.email}`}>{site.email}</a>
+        <span class="footer__links">
+          <a href={`mailto:${site.email}`}>{site.email}</a>
+          <a href="/privacy">Privacy</a>
+        </span>
       </div>
     </footer>
 
@@ -178,6 +181,11 @@ const nav = [
         letter-spacing: 0.14em;
         text-transform: uppercase;
         font-size: 0.72rem;
+      }
+      .footer__links {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
       }
     </style>
 
