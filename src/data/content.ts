@@ -8,7 +8,7 @@ export const site = {
   name: 'Sebastian Cepeda',
   role: 'Producer & Executive Producer',
   // Short line under your name in the hero.
-  tagline: 'Films, series and brand stories that travel across borders.',
+  tagline: 'Films, series, documentaries and brand stories that travel across borders.',
   email: 'cepeda.sebastian@gmail.com',
   locations: ['Zurich', 'Madrid'],
   // Shown next to your base cities to signal you travel for work.
