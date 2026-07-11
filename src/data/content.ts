@@ -79,7 +79,7 @@ export const t = {
       paragraphs: [
         'I’m a producer and executive producer working between Zurich and Madrid, and open to projects worldwide — feature films, series, documentaries, commercials and brand films.',
         'A third-culture kid, born in Buenos Aires and having lived across Germany, Switzerland and Spain, I’ve travelled through 50+ countries — and that perspective sits at the centre of what I make: stories about different lives, different voices, and different ways of telling them. My projects have found homes with Netflix, Amazon Prime Video and Apple TV+, and broadcasters like SRF and ProSieben.',
-        'Having worked across many crafts myself — producing, directing, cinematography, editing, colour and screenwriting — I’m at home with every department. I’ve led teams from 3 to around 150 people, and I know how to adapt to what a crew or client needs.',
+        'Having worked across many disciplines myself — producing, directing, cinematography, editing, colour and screenwriting — I’m at home with every department. I’ve led teams from 3 to around 150 people, and I know how to adapt to what a crew or client needs.',
         'Along the way I’ve learned that good producing is really about trust, taste and follow-through. That’s what I try to bring to every table.',
       ],
       personal: [
