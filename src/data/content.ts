@@ -103,7 +103,7 @@ export const t = {
     strengths: [
       { title: 'Negotiation', body: '22+ years in sales — I know how to fund a project and close a deal.' },
       { title: 'Leadership', body: 'Building the right team and steering it calmly under pressure.' },
-      { title: 'People first', body: 'A production only really works when the people making it are looked after.' },
+      { title: 'People first', body: 'A production works best when the people making it are looked after.' },
     ],
     workLabel: 'Selected work',
     work: [
@@ -199,7 +199,7 @@ export const t = {
     strengths: [
       { title: 'Verhandlung', body: 'Über 22 Jahre im Vertrieb – ich weiss, wie man ein Projekt finanziert und einen Deal abschliesst.' },
       { title: 'Führung', body: 'Das richtige Team aufbauen – und es auch unter Druck ruhig auf Kurs halten.' },
-      { title: 'Der Mensch im Mittelpunkt', body: 'Ein Projekt gelingt nur, wenn es den Menschen dahinter gut geht.' },
+      { title: 'Der Mensch im Mittelpunkt', body: 'Ein Projekt gelingt am besten, wenn es den Menschen dahinter gut geht.' },
     ],
     workLabel: 'Ausgewählte Arbeiten',
     work: [
@@ -295,7 +295,7 @@ export const t = {
     strengths: [
       { title: 'Negociación', body: 'Más de 22 años en ventas: sé cómo financiar un proyecto y cerrar un trato.' },
       { title: 'Liderazgo', body: 'Formar el equipo adecuado y conducirlo con calma bajo presión.' },
-      { title: 'Las personas primero', body: 'Un proyecto funciona de verdad solo cuando la gente que lo hace está bien.' },
+      { title: 'Las personas primero', body: 'Un proyecto funciona mejor cuando la gente que lo hace está bien.' },
     ],
     workLabel: 'Trabajos seleccionados',
     work: [
