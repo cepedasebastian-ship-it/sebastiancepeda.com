@@ -101,7 +101,7 @@ export const t = {
     approachIntro:
       'Technical and creative by nature — my experience taught me to understand both sides of a production, without ever losing the logistics and the budget out of sight.',
     strengths: [
-      { title: 'Negotiation', body: '22+ years in sales — I know how to fund a project and close a deal.' },
+      { title: 'Negotiation', body: '22+ years negotiating and closing deals — I know how to get a project financed and off the ground.' },
       { title: 'Leadership', body: 'Building the right team and steering it calmly under pressure.' },
       { title: 'People first', body: 'A production works best when the people making it are looked after.' },
     ],
@@ -120,6 +120,8 @@ export const t = {
       { format: 'Short', role: 'Executive Producer', year: 'In financing' },
     ],
     companiesLabel: 'Companies',
+    companiesIntro:
+      'Three companies, each covering a front — fiction in Spain, international fiction and documentary, and corporate in Switzerland.',
     companies: [
       { place: 'Madrid', body: 'Film and television production — creative content across features, series and documentary.' },
       { place: 'Zurich · Madrid', body: 'International narrative and documentary production with a multicultural point of view.' },
@@ -197,7 +199,7 @@ export const t = {
     approachIntro:
       'Technisch und kreativ zugleich – ich verstehe beide Seiten einer Produktion, ohne Logistik und Budget aus den Augen zu verlieren.',
     strengths: [
-      { title: 'Verhandlung', body: 'Über 22 Jahre im Vertrieb – ich weiss, wie man ein Projekt finanziert und einen Deal abschliesst.' },
+      { title: 'Verhandlung', body: 'Über 22 Jahre Erfahrung darin, Projekte zu finanzieren und Deals abzuschliessen.' },
       { title: 'Führung', body: 'Das richtige Team aufbauen – und es auch unter Druck ruhig auf Kurs halten.' },
       { title: 'Der Mensch im Mittelpunkt', body: 'Ein Projekt gelingt am besten, wenn es den Menschen dahinter gut geht.' },
     ],
@@ -216,6 +218,8 @@ export const t = {
       { format: 'Kurzfilm', role: 'Executive Producer', year: 'In Finanzierung' },
     ],
     companiesLabel: 'Unternehmen',
+    companiesIntro:
+      'Drei Unternehmen, jedes mit eigenem Schwerpunkt – Fiktion in Spanien, internationale Fiktion und Dokumentarfilm sowie Corporate in der Schweiz.',
     companies: [
       { place: 'Madrid', body: 'Film- und Fernsehproduktion – kreative Inhalte für Spielfilme, Serien und Dokumentationen.' },
       { place: 'Zürich · Madrid', body: 'Internationale fiktionale und dokumentarische Produktion mit multikultureller Perspektive.' },
@@ -293,7 +297,7 @@ export const t = {
     approachIntro:
       'Técnico y creativo por naturaleza: mi experiencia me llevó a entender ambos lados de una producción, sin perder de vista la logística ni el presupuesto.',
     strengths: [
-      { title: 'Negociación', body: 'Más de 22 años en ventas: sé cómo financiar un proyecto y cerrar un trato.' },
+      { title: 'Negociación', body: 'Más de 22 años negociando y cerrando acuerdos: sé cómo financiar un proyecto y sacarlo adelante.' },
       { title: 'Liderazgo', body: 'Formar el equipo adecuado y conducirlo con calma bajo presión.' },
       { title: 'Las personas primero', body: 'Un proyecto funciona mejor cuando la gente que lo hace está bien.' },
     ],
@@ -312,6 +316,8 @@ export const t = {
       { format: 'Cortometraje', role: 'Productor Ejecutivo', year: 'En financiación' },
     ],
     companiesLabel: 'Empresas',
+    companiesIntro:
+      'Tres empresas, cada una en su frente: ficción en España, ficción internacional y documental, y corporativo en Suiza.',
     companies: [
       { place: 'Madrid', body: 'Producción de cine y televisión: contenidos creativos en largometraje, serie y documental.' },
       { place: 'Zúrich · Madrid', body: 'Producción internacional de ficción y documental con una mirada multicultural.' },

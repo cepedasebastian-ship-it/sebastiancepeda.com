@@ -119,6 +119,7 @@ const education = shared.eduBase.map((e, i) => ({ ...e, ...t.education[i] }));
 <section id="companies" class="section">
   <div class="wrap">
     <p class="section__label reveal">{t.companiesLabel}</p>
+    <p class="companies__intro reveal">{t.companiesIntro}</p>
     <div class="companies">
       {
         companies.map((c) => (
@@ -484,6 +485,15 @@ const education = shared.eduBase.map((e, i) => ({ ...e, ...t.education[i] }));
   }
 
   /* ---------------------------- COMPANIES ----------------------------- */
+  .companies__intro {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+    line-height: 1.45;
+    color: var(--text);
+    max-width: 42ch;
+    margin: 0 0 clamp(2rem, 4vw, 3rem);
+  }
   .companies {
     display: grid;
     gap: 1.25rem;
