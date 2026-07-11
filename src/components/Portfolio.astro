@@ -33,7 +33,7 @@ const education = shared.eduBase.map((e, i) => ({ ...e, ...t.education[i] }));
 <!-- ============================ ABOUT ============================ -->
 <section id="about" class="section">
   <div class="wrap">
-    <p class="section__label reveal">{t.about.heading}</p>
+    <h2 class="section__label reveal">{t.about.heading}</h2>
     <div class="about">
       <figure class="about__portrait reveal">
         <img src={shared.portrait} alt={t.about.portraitAlt} width="600" height="800" />
@@ -53,7 +53,7 @@ const education = shared.eduBase.map((e, i) => ({ ...e, ...t.education[i] }));
 <!-- ========================== WHAT I DO ========================== -->
 <section id="services" class="section">
   <div class="wrap">
-    <p class="section__label reveal">{t.servicesLabel}</p>
+    <h2 class="section__label reveal">{t.servicesLabel}</h2>
     <div class="services">
       {
         t.services.map((s) => (
@@ -70,7 +70,7 @@ const education = shared.eduBase.map((e, i) => ({ ...e, ...t.education[i] }));
 <!-- ========================= HOW I WORK ========================= -->
 <section id="approach" class="section">
   <div class="wrap">
-    <p class="section__label reveal">{t.approachLabel}</p>
+    <h2 class="section__label reveal">{t.approachLabel}</h2>
     <p class="approach__lead reveal">{t.approachIntro}</p>
     <div class="approach">
       {
@@ -89,7 +89,7 @@ const education = shared.eduBase.map((e, i) => ({ ...e, ...t.education[i] }));
 <!-- ======================== SELECTED WORK ======================== -->
 <section id="work" class="section">
   <div class="wrap">
-    <p class="section__label reveal">{t.workLabel}</p>
+    <h2 class="section__label reveal">{t.workLabel}</h2>
     <ul class="work-grid">
       {
         work.map((p) => (
@@ -118,7 +118,7 @@ const education = shared.eduBase.map((e, i) => ({ ...e, ...t.education[i] }));
 <!-- ========================= COMPANIES ========================= -->
 <section id="companies" class="section">
   <div class="wrap">
-    <p class="section__label reveal">{t.companiesLabel}</p>
+    <h2 class="section__label reveal">{t.companiesLabel}</h2>
     <p class="companies__intro reveal">{t.companiesIntro}</p>
     <div class="companies">
       {
@@ -146,7 +146,7 @@ const education = shared.eduBase.map((e, i) => ({ ...e, ...t.education[i] }));
 <!-- ========================= EDUCATION ========================= -->
 <section id="education" class="section">
   <div class="wrap">
-    <p class="section__label reveal">{t.educationLabel}</p>
+    <h2 class="section__label reveal">{t.educationLabel}</h2>
     <ul class="education">
       {
         education.map((e) => (
@@ -164,7 +164,7 @@ const education = shared.eduBase.map((e, i) => ({ ...e, ...t.education[i] }));
 <!-- ========================== CONTACT ========================== -->
 <section id="contact" class="section contact">
   <div class="wrap">
-    <p class="section__label reveal">{t.contactLabel}</p>
+    <h2 class="section__label reveal">{t.contactLabel}</h2>
     <h2 class="contact__headline reveal">{t.contact.headline}</h2>
     <p class="contact__intro reveal">{t.contact.intro}</p>
     <a class="contact__email reveal js-mail" data-user={emailUser} data-domain={emailDomain} href="#" aria-label="Email">{emailUser} [at] {emailDomain}</a>
