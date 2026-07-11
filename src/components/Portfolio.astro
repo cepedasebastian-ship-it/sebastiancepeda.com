@@ -3,6 +3,9 @@ import { shared } from '../data/content';
 
 const { t } = Astro.props;
 
+// Email split so the address is assembled by JS, not left in the HTML for bots.
+const [emailUser, emailDomain] = shared.email.split('@');
+
 const work = shared.workBase.map((b, i) => ({ ...b, ...t.work[i] }));
 const companies = shared.companyLinks.map((c, i) => ({ ...c, ...t.companies[i] }));
 const education = shared.eduBase.map((e, i) => ({ ...e, ...t.education[i] }));
@@ -163,7 +166,7 @@ const education = shared.eduBase.map((e, i) => ({ ...e, ...t.education[i] }));
     <p class="section__label reveal">{t.contactLabel}</p>
     <h2 class="contact__headline reveal">{t.contact.headline}</h2>
     <p class="contact__intro reveal">{t.contact.intro}</p>
-    <a class="contact__email reveal" href={`mailto:${shared.email}`}>{shared.email}</a>
+    <a class="contact__email reveal js-mail" data-user={emailUser} data-domain={emailDomain} href="#" aria-label="Email">{emailUser} [at] {emailDomain}</a>
     <div class="contact__social reveal">
       {shared.social.map((s) => <a href={s.href} target="_blank" rel="noopener">{s.label}</a>)}
     </div>

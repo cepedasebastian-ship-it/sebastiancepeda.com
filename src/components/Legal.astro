@@ -1,6 +1,11 @@
 ---
+import { shared } from '../data/content';
+
 const { t, homeHref = '/' } = Astro.props;
 const p = t.privacy;
+
+// Email split so the address is assembled by JS, not left in the HTML for bots.
+const [emailUser, emailDomain] = shared.email.split('@');
 ---
 
 <section class="section legal">
@@ -12,12 +17,26 @@ const p = t.privacy;
     <p class="legal__lead">{p.lead}</p>
 
     {
-      p.sections.map((s) => (
-        <div class="legal__section">
-          <h2>{s.h}</h2>
-          <p>{s.body}</p>
-        </div>
-      ))
+      p.sections.map((s) => {
+        const parts = s.body.split(shared.email);
+        return (
+          <div class="legal__section">
+            <h2>{s.h}</h2>
+            <p>
+              {parts.map((part, i) => (
+                <Fragment>
+                  {part}
+                  {i < parts.length - 1 && (
+                    <a class="js-mail" data-user={emailUser} data-domain={emailDomain} href="#" aria-label="Email">
+                      {emailUser} [at] {emailDomain}
+                    </a>
+                  )}
+                </Fragment>
+              ))}
+            </p>
+          </div>
+        );
+      })
     }
 
     <p class="legal__back"><a href={homeHref}>{p.back}</a></p>

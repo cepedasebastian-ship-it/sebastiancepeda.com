@@ -14,7 +14,12 @@ const siteUrl = Astro.site?.href ?? 'https://sebastiancepeda.com/';
 const canonicalUrl = new URL(alternates[lang], siteUrl).href;
 const ogImage = new URL('/portrait.jpg', siteUrl).href;
 
+// Email split into parts so the address is assembled by JS at runtime,
+// keeping the plain `user@domain` string out of the static HTML that bots scrape.
+const [emailUser, emailDomain] = shared.email.split('@');
+
 // schema.org Person — helps SEO and how AI / search engines understand who you are.
+// (email intentionally omitted from the schema to avoid exposing it to scrapers.)
 const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
@@ -23,7 +28,6 @@ const personSchema = {
   description: pageDesc,
   url: canonicalUrl,
   image: ogImage,
-  email: `mailto:${shared.email}`,
   worksFor: shared.companyLinks.map((c) => ({ '@type': 'Organization', name: c.name, url: c.href })),
   address: shared.locations.map((l) => ({ '@type': 'PostalAddress', addressLocality: l })),
   sameAs: shared.social.map((s) => s.href),
@@ -124,7 +128,7 @@ const nav = [
         <span>© {new Date().getFullYear()} {shared.name}</span>
         <span class="footer__meta">{t.cities.join(' · ')}</span>
         <span class="footer__links">
-          <a href={`mailto:${shared.email}`}>{shared.email}</a>
+          <a class="js-mail" data-user={emailUser} data-domain={emailDomain} href="#" aria-label="Email">{emailUser} [at] {emailDomain}</a>
           <a href={privacyHref}>{t.privacyLabel}</a>
         </span>
       </div>
@@ -264,6 +268,17 @@ const nav = [
       } else {
         els.forEach((el) => el.classList.add('is-in'));
       }
+
+      // Email obfuscation — assemble the address at runtime so the plain
+      // `user@domain` never sits in the static HTML for scrapers to harvest.
+      document.querySelectorAll('.js-mail').forEach((a) => {
+        const u = a.getAttribute('data-user');
+        const d = a.getAttribute('data-domain');
+        if (!u || !d) return;
+        const addr = u + '@' + d;
+        a.setAttribute('href', 'mailto:' + addr);
+        a.textContent = addr;
+      });
     </script>
   </body>
 </html>
