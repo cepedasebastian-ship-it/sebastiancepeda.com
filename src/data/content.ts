@@ -175,7 +175,7 @@ export const t = {
       paragraphs: [
         'Ich bin Produzent und Executive Producer, zu Hause in Zürich und Madrid und weltweit tätig. Ich entwickle und begleite Projekte von der ersten Idee bis zur Veröffentlichung: Spielfilme, Serien, Dokumentationen, Werbespots, Kurzfilme, Musikvideos und Markenfilme.',
         'Als Third Culture Kid – geboren in Buenos Aires, gelebt in Deutschland, der Schweiz und Spanien – habe ich über 50 Länder bereist. Diese Perspektive prägt alles, was ich mache: Geschichten über unterschiedliche Leben und Stimmen – und über neue Wege, sie zu erzählen. Meine Projekte liefen bei Netflix, Amazon Prime Video und Apple TV+ sowie bei SRF und ProSieben.',
-        'Ich habe selbst in vielen Bereichen gearbeitet – Produktion, Regie, Kamera, Schnitt, Farbkorrektur und Drehbuch. Deshalb bewege ich mich auf Augenhöhe mit jedem Department. Ich habe Teams von 3 bis rund 150 Personen geleitet und weiß, mich dabei auf die Bedürfnisse von Crew und Kunde einzustellen.',
+        'Ich habe selbst in vielen Bereichen gearbeitet – Produktion, Regie, Kamera, Schnitt, Farbkorrektur und Drehbuch. Deshalb bewege ich mich auf Augenhöhe mit jedem Department. Ich habe Teams von 3 bis rund 150 Personen geleitet und weiss, mich dabei auf die Bedürfnisse von Crew und Kunde einzustellen.',
         'Über die Jahre habe ich gelernt: Gutes Produzieren beruht vor allem auf Vertrauen, Gespür und Verlässlichkeit. Genau das bringe ich in jedes Projekt ein.',
       ],
       personal: [
@@ -197,7 +197,7 @@ export const t = {
     approachIntro:
       'Technisch und kreativ zugleich – ich verstehe beide Seiten einer Produktion, ohne Logistik und Budget aus den Augen zu verlieren.',
     strengths: [
-      { title: 'Verhandlung', body: 'Über 22 Jahre im Vertrieb – ich weiß, wie man ein Projekt finanziert und einen Deal abschließt.' },
+      { title: 'Verhandlung', body: 'Über 22 Jahre im Vertrieb – ich weiss, wie man ein Projekt finanziert und einen Deal abschliesst.' },
       { title: 'Führung', body: 'Das richtige Team aufbauen – und es auch unter Druck ruhig auf Kurs halten.' },
       { title: 'Der Mensch im Mittelpunkt', body: 'Wer gut mit Menschen umgeht, sieht das Ergebnis auf der Leinwand.' },
     ],
@@ -239,7 +239,7 @@ export const t = {
       sections: [
         { h: 'Analyse', body: 'Ich nutze Cloudflare Web Analytics, einen datenschutzfreundlichen, cookielosen Dienst. Er misst nur anonyme, aggregierte Informationen – etwa Seitenaufrufe, das Herkunftsland eines Besuchs und die verweisende Seite. Er verwendet keine Cookies, erstellt keinen Geräte-Fingerabdruck und kann Sie nicht identifizieren oder über andere Websites hinweg verfolgen.' },
         { h: 'Cookies', body: 'Diese Website speichert keine Cookies auf Ihrem Gerät. Deshalb sehen Sie auch kein Cookie-Banner – es gibt nichts, dem Sie zustimmen müssten.' },
-        { h: 'Wenn Sie mir schreiben', body: 'Wenn Sie sich unter cepeda.sebastian@gmail.com melden, nutze ich Ihre Nachricht und Kontaktdaten ausschließlich, um Ihnen zu antworten. Ich setze Sie auf keine Verteilerliste und gebe Ihre Daten an niemanden weiter.' },
+        { h: 'Wenn Sie mir schreiben', body: 'Wenn Sie sich unter cepeda.sebastian@gmail.com melden, nutze ich Ihre Nachricht und Kontaktdaten ausschliesslich, um Ihnen zu antworten. Ich setze Sie auf keine Verteilerliste und gebe Ihre Daten an niemanden weiter.' },
         { h: 'Hosting', body: 'Die Website wird bei Netlify gehostet, das – wie jeder Webhost – technische Standard-Logs (etwa IP-Adressen) verarbeiten kann, um Seiten auszuliefern und die Website sicher zu halten. Diese Logs werden nicht zur Profilbildung genutzt.' },
         { h: 'Ihre Rechte', body: 'Nach schweizerischem (revDSG) und EU-Recht (DSGVO) haben Sie Rechte an allen Sie betreffenden personenbezogenen Daten. Da diese Website keine Besucherprofile erstellt, gibt es kaum etwas zu veranlassen – bei Fragen zum Datenschutz schreiben Sie mir einfach an cepeda.sebastian@gmail.com, ich helfe gern.' },
       ],
