@@ -271,7 +271,7 @@ export const t = {
       paragraphs: [
         'Soy productor y productor ejecutivo, trabajo entre Zúrich y Madrid y estoy abierto a proyectos en todo el mundo. Desarrollo y lidero proyectos desde la primera chispa de una idea hasta el momento en que llegan a su público: largometrajes, series, documentales, publicidad, cortometrajes, videoclips y films de marca.',
         'Soy un third culture kid: nací en Buenos Aires y viví entre Alemania, Suiza y España, y he viajado por más de 50 países. Esa mirada está en el centro de lo que hago: historias sobre vidas distintas, voces distintas y formas distintas de contarlas. Mis proyectos han llegado a Netflix, Amazon Prime Video y Apple TV+, y a cadenas como SRF y ProSieben.',
-        'He trabajado yo mismo en muchos oficios —producción, dirección, fotografía, montaje, color y guion—, así que me muevo de igual a igual con cada departamento. He liderado equipos de 3 a unas 150 personas, y sé adaptarme a lo que necesita el equipo o el cliente.',
+        'Trabajé en muchos oficios —producción, dirección, fotografía, montaje, color y guion—, así que me muevo de igual a igual con cada departamento. Lideré equipos de 3 a unas 150 personas, y sé adaptarme a lo que necesita el equipo o el cliente.',
         'Con el tiempo aprendí que producir bien es, sobre todo, cuestión de confianza, criterio y cumplir lo que se promete. Eso es lo que intento llevar a cada mesa.',
       ],
       personal: [
