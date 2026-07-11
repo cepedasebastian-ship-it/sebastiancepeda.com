@@ -175,7 +175,7 @@ export const t = {
       paragraphs: [
         'Ich bin Produzent und Executive Producer, zu Hause in Zürich und Madrid und weltweit tätig. Ich entwickle und begleite Projekte von der ersten Idee bis zur Veröffentlichung: Spielfilme, Serien, Dokumentationen, Werbespots, Kurzfilme, Musikvideos und Markenfilme.',
         'Als Third Culture Kid – geboren in Buenos Aires, gelebt in Deutschland, der Schweiz und Spanien – habe ich über 50 Länder bereist. Diese Perspektive prägt alles, was ich mache: Geschichten über unterschiedliche Leben und Stimmen – und über neue Wege, sie zu erzählen. Meine Projekte liefen bei Netflix, Amazon Prime Video und Apple TV+ sowie bei SRF und ProSieben.',
-        'Ich habe selbst in vielen Bereichen gearbeitet – Produktion, Regie, Kamera, Schnitt, Farbkorrektur und Drehbuch. Deshalb bewege ich mich auf Augenhöhe mit jedem Department: Ich kann führen und mich ebenso auf die Bedürfnisse von Team und Kunde einstellen.',
+        'Ich habe selbst in vielen Bereichen gearbeitet – Produktion, Regie, Kamera, Schnitt, Farbkorrektur und Drehbuch. Deshalb bewege ich mich auf Augenhöhe mit jedem Department. Ich habe Teams von 3 bis rund 150 Personen geleitet und weiß, mich dabei auf die Bedürfnisse von Crew und Kunde einzustellen.',
         'Über die Jahre habe ich gelernt: Gutes Produzieren beruht vor allem auf Vertrauen, Gespür und Verlässlichkeit. Genau das bringe ich in jedes Projekt ein.',
       ],
       personal: [
