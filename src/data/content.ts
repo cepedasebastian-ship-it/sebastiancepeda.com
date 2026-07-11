@@ -78,7 +78,7 @@ export const t = {
       portraitAlt: 'Sebastian Cepeda',
       paragraphs: [
         'I’m a producer and executive producer working between Zurich and Madrid, and open to projects worldwide — feature films, series, documentaries, commercials and brand films.',
-        'A third-culture kid, born in Buenos Aires and having lived across Germany, Switzerland and Spain, I’ve travelled through 50+ countries — and that perspective sits at the centre of what I make: stories about different lives, different voices, and different ways of telling them. My projects have found homes with Netflix, Amazon Prime Video and Apple TV+, and broadcasters like SRF and ProSieben.',
+        'A third-culture kid, born in Buenos Aires and having lived across Germany, Switzerland and Spain, I’ve travelled through 50+ countries — and that perspective sits at the centre of what I make: stories about different lives, different voices, and different ways of telling them. My projects have found homes with Netflix, Amazon Prime Video and Apple TV, and broadcasters like SRF and ProSieben.',
         'Having worked across many disciplines myself — producing, directing, cinematography, editing, colour and screenwriting — I’m at home with every department. I’ve led teams from 3 to around 150 people, and I know how to adapt to what a crew or client needs.',
         'Along the way I’ve learned that good producing is really about trust, taste and follow-through. That’s what I try to bring to every table.',
       ],
@@ -174,7 +174,7 @@ export const t = {
       portraitAlt: 'Sebastian Cepeda',
       paragraphs: [
         'Ich bin Produzent und Executive Producer, zu Hause in Zürich und Madrid und weltweit tätig. Ich entwickle und begleite Projekte von der ersten Idee bis zur Veröffentlichung: Spielfilme, Serien, Dokumentationen, Werbespots, Kurzfilme, Musikvideos und Markenfilme.',
-        'Als Third Culture Kid – geboren in Buenos Aires, gelebt in Deutschland, der Schweiz und Spanien – habe ich über 50 Länder bereist. Diese Perspektive prägt alles, was ich mache: Geschichten über unterschiedliche Leben und Stimmen – und über neue Wege, sie zu erzählen. Meine Projekte liefen bei Netflix, Amazon Prime Video und Apple TV+ sowie bei SRF und ProSieben.',
+        'Als Third Culture Kid – geboren in Buenos Aires, gelebt in Deutschland, der Schweiz und Spanien – habe ich über 50 Länder bereist. Diese Perspektive prägt alles, was ich mache: Geschichten über unterschiedliche Leben und Stimmen – und über neue Wege, sie zu erzählen. Meine Projekte liefen bei Netflix, Amazon Prime Video und Apple TV sowie bei SRF und ProSieben.',
         'Ich habe selbst in vielen Bereichen gearbeitet – Produktion, Regie, Kamera, Schnitt, Farbkorrektur und Drehbuch. Deshalb bewege ich mich auf Augenhöhe mit jedem Department. Ich habe Teams von 3 bis rund 150 Personen geleitet und weiss, mich dabei auf die Bedürfnisse von Crew und Kunde einzustellen.',
         'Über die Jahre habe ich gelernt: Gutes Produzieren beruht vor allem auf Vertrauen, Gespür und Verlässlichkeit. Genau das bringe ich in jedes Projekt ein.',
       ],
@@ -270,7 +270,7 @@ export const t = {
       portraitAlt: 'Sebastian Cepeda',
       paragraphs: [
         'Soy productor y productor ejecutivo, trabajo entre Zúrich y Madrid y estoy abierto a proyectos en todo el mundo. Desarrollo y lidero proyectos desde la primera chispa de una idea hasta el momento en que llegan a su público: largometrajes, series, documentales, publicidad, cortometrajes, videoclips y films de marca.',
-        'Soy un third culture kid: nací en Buenos Aires y viví entre Alemania, Suiza y España, y he viajado por más de 50 países. Esa mirada está en el centro de lo que hago: historias sobre vidas distintas, voces distintas y formas distintas de contarlas. Mis proyectos han llegado a Netflix, Amazon Prime Video y Apple TV+, y a cadenas como SRF y ProSieben.',
+        'Soy un third culture kid: nací en Buenos Aires y viví entre Alemania, Suiza y España, y he viajado por más de 50 países. Esa mirada está en el centro de lo que hago: historias sobre vidas distintas, voces distintas y formas distintas de contarlas. Mis proyectos han llegado a Netflix, Amazon Prime Video y Apple TV, y a cadenas como SRF y ProSieben.',
         'Trabajé en muchos oficios —producción, dirección, fotografía, montaje, color y guion—, así que me muevo de igual a igual con cada departamento. Lideré equipos de 3 a unas 150 personas, y sé adaptarme a lo que necesita el equipo o el cliente.',
         'Con el tiempo aprendí que producir bien es, sobre todo, cuestión de confianza, criterio y cumplir lo que se promete. Eso es lo que intento llevar a cada mesa.',
       ],
