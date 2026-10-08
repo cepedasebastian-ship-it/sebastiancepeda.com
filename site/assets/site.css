@@ -243,3 +243,4 @@ button.card:hover .frame img{transform:scale(1.04)}
 @media (max-width:760px){.biz-cols{grid-template-columns:1fr}}
 .biz + section{border-top:0}
 .frame::before,.frame::after{display:none}
+.biz{background:#171a0f;border-top:1px solid #2a2e1c;border-bottom:1px solid #2a2e1c}
