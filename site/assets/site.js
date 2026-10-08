@@ -62,7 +62,6 @@ function renderGrid(l){
   <${p.v ? 'button type="button"' : 'div'} class="card"${p.v ? ` data-v="${p.v}" aria-label="${T[l].play}: ${p.c} · ${p.t[l]}"` : ""}>
     <div class="frame${p.v ? " has-img" : ""}" style="--x:${p.x};--y:${p.y}">
       ${p.v ? `<img src="/video/${p.v}.jpg" alt="" loading="lazy" width="1280" height="720"><video class="pv" muted loop playsinline preload="none" data-src="/video/p-${p.v}.mp4" aria-hidden="true"></video><span class="shade"></span>` : ""}
-      <span class="tc">TC 0${i+1}:00:00:00</span><span class="fmt">${p.f[l]}</span>
       <span class="play" aria-hidden="true"></span>
       <span class="client">${p.c}</span>
     </div>
