@@ -5,12 +5,12 @@ const T = {
     lede:"17 years across production, directing and cinematography. From feature films and documentaries to global brand productions for Porsche, FIFA, UBS, Siemens and On.",
     ctaWork:"Selected work", ctaAbout:"About me", base:"Based in Zürich · Switzerland · Working internationally",
     p1:"years in production", p2n:"1,500+", p2:"productions delivered", p3:"people led on set", p4:"first Swiss feature film on Netflix",
-    workEy:"Work", workH:"Selected work", workP:"Brand films, campaigns, documentaries and long-form productions.",
+    bizEy:"Business", bizH:"A film should not only look good. <em>It should have a job to do.</em>", bizP1:"Since 2017 I have also been running the business behind the work. At VIVEN AG I built and led an inbound-driven approach to new business, from positioning and content through client conversations and proposals to negotiation and closing. I then embedded the process in the team so it could scale beyond me.", bizP2:"That shaped how I think about production. Whether the goal is to build a brand, explain a product, attract talent or support a campaign, I look at every piece of content in the context of the marketing and business objective behind it.", workEy:"Work", workH:"Selected work", workP:"Different formats, different objectives, one production mindset.",
     bringEy:"Profile", bringH:"What I bring", bringP:"A filmmaker’s eye and a producer’s responsibility, in one person.",
     b1h:"Creative judgement", b1p:"A filmmaker’s eye, built through years of hands-on work in concept, direction, cinematography, editing and colour grading.",
     b2h:"Production leadership", b2p:"Teams, budgets, suppliers, schedules and delivery, from lean crews to productions with 150 people on set.",
-    b3h:"Business thinking", b3p:"Keeping creative ambition, audience, budget and business objectives moving in the same direction.",
-    b4h:"End-to-end ownership", b4p:"From brief and concept through pre-production, shoot, post and final delivery. One accountable lead.",
+    b3h:"Business &amp; marketing", b3p:"Positioning, content, client acquisition, proposals, negotiation and closing, learned by running and growing a production company.",
+    b4h:"End-to-end ownership", b4p:"From business objective and creative concept through pre-production, shoot and post to final approval.",
     rangeEy:"Range", rangeH:"From 15 seconds to 92 minutes.", rangeP:"From social campaigns to Netflix feature films. Social, brand, product, documentary, feature.",
     l1:"<b>Reels &amp; cut-downs</b><small>Social-first edits for Porsche and Philips</small>",
     l2:"<b>Social campaigns</b><small>Multi-part campaigns built for the feed</small>",
@@ -20,21 +20,21 @@ const T = {
     l6:"<b>Documentary</b><small>NCCR Robotics; Villa Málaga (95 min)</small>",
     l7:"<b>Feature film</b><small>Singularity, the first Swiss feature film released on Netflix</small>",
     disc:"That feature-film discipline (planned shots, tight schedules, clear priorities and no wasted time) is what I bring to every production.",
-    howEy:"How I work", howH:"One point of contact, from start to finish.",
-    howP:"I take projects through the whole process: understanding the creative ambition, building the right team and making sure that what is delivered is exactly what was planned.",
+    howEy:"How I work", howH:"I start with the objective, not the format.",
+    howP:"What does the content need to achieve? From there I shape the creative approach, build the right team and lead the production through to final delivery, so the result works creatively, operationally and commercially.",
     s1h:"Concept &amp; development", s1p:"Goal, audience, story and format.",
     s2h:"Planning", s2p:"Team, locations, schedule, suppliers and budget.",
     s3h:"Shoot", s3p:"Leading on set, with clear decisions and calm communication.",
     s4h:"Post &amp; delivery", s4p:"Edit, sound, colour, versions and final delivery.",
     expEy:"Experience", expH:"From camera to head of production.", expP:"17 years, three chapters.",
     y1:"2017 – present", r1:"Managing Director · Executive Producer · Head of Production",
-    v1:"Leading end-to-end creative productions for global brands and Swiss companies, from brief and creative development through production, post and delivery.",
+    v1:"Leading the company across creative production, marketing and business development. Built and led an inbound-driven new business model, from positioning and lead generation through proposals, negotiation and closing, and embedded it in the team. Alongside, end-to-end productions for global brands and Swiss companies.",
     n1:"1,500+ productions", n2:"Crews up to 150 on set", n4:"In-house team of up to 12", eduEy:"Education",
     aboutEy:"About", aboutH:"Creative eye. Producer’s discipline.",
     a1:"I’m Sebastian, a creative production lead and executive producer based in Zürich.",
     a2:"I started behind the camera in 2009 and worked through directing, cinematography, editing and colour before moving into production leadership. That background means I understand both sides of a production: the creative ambition and everything required to actually deliver it.",
     a3:"Over the past 17 years I’ve worked across feature films, documentaries, commercials, branded content and employer branding, from small crews to productions with 150 people on set.",
-    a4:"I’m happiest where creative and business meet: turning a brief into a story, a story into a plan, and a plan into something people want to watch.",
+    a4:"Since 2017 I have also been running the business behind the work. It taught me that a good film needs a creative idea, and a great production also knows what that idea is supposed to achieve.",
     a5:"Born in Buenos Aires and based in Zürich, I work across cultures and languages. Off set, I’m usually outdoors, behind a camera or with a book.",
     langs:"<b>Languages</b> · English · German · Swiss German · Spanish · French · Italian",
     handsEy:"Technical background", h1:"Camera &amp; cinematography", h1d:"Cinema cameras · lighting · photography", h2:"Post-production", h4:"AI workflows", h4d:"Generative video · pre-visualisation · concept development",
@@ -154,7 +154,7 @@ document.getElementById("copy-mail").addEventListener("click", async (e) => {
   // reveal on scroll (only for things below the first screen)
   if (!reduce && "IntersectionObserver" in window) {
     document.documentElement.classList.add("js");
-    const sel = ".sec-head, #grid > *, .bring > *, .steps > li, .legend li, .cv > li, .about > *, .logos, .contact h2, .contact .sub, .reach, .how-head";
+    const sel = ".biz h2, .biz-cols p, .sec-head, #grid > *, .bring > *, .steps > li, .legend li, .cv > li, .about > *, .logos, .contact h2, .contact .sub, .reach, .how-head";
     const items = [...document.querySelectorAll(sel)].filter(el => el.getBoundingClientRect().top > innerHeight * 0.9);
     const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -8% 0px" });
     items.forEach(el => {
