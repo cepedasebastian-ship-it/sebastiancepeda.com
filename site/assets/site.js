@@ -38,7 +38,7 @@ const T = {
     a5:"Born in Buenos Aires and based in Zürich, I work across cultures and languages. Off set, I’m usually outdoors, behind a camera or with a book.",
     langs:"<b>Languages</b> · English · German · Swiss German · Spanish · French · Italian",
     handsEy:"Technical background", h1:"Camera &amp; cinematography", h1d:"Cinema cameras · lighting · photography", h2:"Post-production", h4:"AI workflows", h4d:"Generative video · pre-visualisation · concept development",
-    clientsEy:"Trusted by", cH:"Let’s talk.", cSub:"Good work starts with a good conversation.", copy:"Copy email", showMail:"Show email", showTel:"Show phone", copied:"Copied", selected:"Selected", foot:"Zürich, Switzerland", privacy:"Privacy", close:"Close",
+    clientsEy:"Trusted by", cH:"Let’s talk.", cSub:"Good work starts with a good conversation.", copy:"Copy email", showMail:"Show email", showTel:"Show phone", copied:"Copied", selected:"Selected", foot:"Zürich, Switzerland", privacy:"Privacy", close:"Close", reelCap:"Moments from the projects below",
     role:"Role", scale:"Scale", award:"Award", play:"Play video"
   },
   de: {}
@@ -61,7 +61,7 @@ function renderGrid(l){
   document.getElementById("grid").innerHTML = projects.map((p,i) => `
   <${p.v ? 'button type="button"' : 'div'} class="card"${p.v ? ` data-v="${p.v}" aria-label="${T[l].play}: ${p.c} · ${p.t[l]}"` : ""}>
     <div class="frame${p.v ? " has-img" : ""}" style="--x:${p.x};--y:${p.y}">
-      ${p.v ? `<img src="/video/${p.v}.jpg" alt="" loading="lazy" width="1280" height="720"><span class="shade"></span>` : ""}
+      ${p.v ? `<img src="/video/${p.v}.jpg" alt="" loading="lazy" width="1280" height="720"><video class="pv" muted loop playsinline preload="none" data-src="/video/p-${p.v}.mp4" aria-hidden="true"></video><span class="shade"></span>` : ""}
       <span class="tc">TC 0${i+1}:00:00:00</span><span class="fmt">${p.f[l]}</span>
       <span class="play" aria-hidden="true"></span>
       <span class="client">${p.c}</span>
@@ -124,3 +124,57 @@ document.getElementById("copy-mail").addEventListener("click", async (e) => {
   catch { const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = T[lang].selected; }
   setTimeout(() => btn.textContent = T[lang].copy, 1800);
 });
+
+/* ---- motion ---- */
+(() => {
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const touch = matchMedia("(hover: none)").matches;
+  const load = v => { if (!v.getAttribute("src") && v.dataset.src) v.src = v.dataset.src; };
+  const play = v => { load(v); const p = v.play(); if (p) p.then(() => v.classList.add("on")).catch(() => {}); };
+  const stop = v => { v.pause(); v.classList.remove("on"); };
+
+  // showreel: plays only while visible
+  const reel = document.querySelector(".reel-v");
+  if (reel && !reduce) {
+    new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? play(e.target) : e.target.pause()), { threshold: 0.25 }).observe(reel);
+  }
+
+  // card previews: hover on desktop, in view on touch devices
+  const grid = document.getElementById("grid");
+  if (!reduce && grid) {
+    if (touch) {
+      const io = new IntersectionObserver(es => es.forEach(e => { const v = e.target.querySelector(".pv"); if (!v) return; e.intersectionRatio > 0.65 ? play(v) : stop(v); }), { threshold: [0, 0.65, 1] });
+      grid.querySelectorAll("button.card .frame").forEach(f => io.observe(f));
+    } else {
+      grid.addEventListener("mouseover", e => { const c = e.target.closest("button.card"); if (c && !c.contains(e.relatedTarget)) { const v = c.querySelector(".pv"); v && play(v); } });
+      grid.addEventListener("mouseout", e => { const c = e.target.closest("button.card"); if (c && !c.contains(e.relatedTarget)) { const v = c.querySelector(".pv"); v && stop(v); } });
+    }
+  }
+
+  // reveal on scroll (only for things below the first screen)
+  if (!reduce && "IntersectionObserver" in window) {
+    document.documentElement.classList.add("js");
+    const sel = ".sec-head, #grid > *, .bring > *, .steps > li, .legend li, .cv > li, .about > *, .logos, .contact h2, .contact .sub, .reach, .how-head";
+    const items = [...document.querySelectorAll(sel)].filter(el => el.getBoundingClientRect().top > innerHeight * 0.9);
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -8% 0px" });
+    items.forEach(el => {
+      const sib = el.parentElement ? [...el.parentElement.children].filter(x => items.includes(x)) : [];
+      el.style.setProperty("--d", (Math.min(Math.max(sib.indexOf(el), 0), 3) * 0.08) + "s");
+      el.classList.add("rv"); io.observe(el);
+    });
+  }
+
+  // count-up for the key figures
+  const nums = [...document.querySelectorAll(".proof b")].filter(b => /\d/.test(b.textContent));
+  if (!reduce && nums.length) {
+    const run = b => {
+      const txt = b.textContent, n = parseInt(txt.replace(/\D/g, ""), 10), sep = (txt.match(/[’',.]/) || [""])[0], suf = txt.replace(/[\d’',.]/g, "");
+      const fmt = x => (sep && x >= 1000 ? Math.floor(x / 1000) + sep + String(x % 1000).padStart(3, "0") : String(x)) + suf;
+      const t0 = performance.now(), dur = 1400;
+      const step = t => { const k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3); b.textContent = fmt(Math.round(n * e)); if (k < 1) requestAnimationFrame(step); else b.textContent = txt; };
+      requestAnimationFrame(step);
+    };
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { run(e.target); io.unobserve(e.target); } }), { threshold: 0.6 });
+    nums.forEach(b => io.observe(b));
+  }
+})();

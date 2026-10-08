@@ -67,6 +67,10 @@
       <div><b>Netflix</b><span data-i="p4">erster Schweizer Spielfilm auf Netflix</span></div>
     </div>
   </section>
+  <section class="reel" aria-label="Showreel">
+    <video class="reel-v" muted loop playsinline preload="none" poster="/video/reel.jpg" data-src="/video/reel.mp4" aria-hidden="true"></video>
+    <div class="reel-cap"><span class="dot" aria-hidden="true"></span><span>Showreel</span><span data-i="reelCap">Ausschnitte aus den Projekten unten</span></div>
+  </section>
 
   <section id="work">
     <div class="sec-head">
@@ -74,9 +78,9 @@
       <p data-i="workP">Markenfilme, Kampagnen, Dokumentarfilme und Langformate.</p>
     </div>
     <div class="grid" id="grid">
-  <button type="button" class="card" data-v="on-roger" aria-label="Video abspielen: On · The Roger Kids">
+  <button type="button" class="card rv" data-v="on-roger" aria-label="Video abspielen: On · The Roger Kids" style="--d: 0s;">
     <div class="frame has-img" style="--x:60%;--y:40%">
-      <img src="/video/on-roger.jpg" alt="" loading="lazy" width="1280" height="720"><span class="shade"></span>
+      <img src="/video/on-roger.jpg" alt="" loading="lazy" width="1280" height="720"><video class="pv" muted="" loop="" playsinline="" preload="none" data-src="/video/p-on-roger.mp4" aria-hidden="true"></video><span class="shade"></span>
       <span class="tc">TC 01:00:00:00</span><span class="fmt">Produktfilm</span>
       <span class="play" aria-hidden="true"></span>
       <span class="client">On</span>
@@ -86,9 +90,9 @@
     <p>Produktfilm für THE ROGER Kids, den Kinderschuh der Linie mit Roger Federer: Studioaufnahmen mit Makro-Details auf farbigen Hintergründen.</p>
     <dl><dt>Rolle</dt><dd>Executive Producer · Producer · Director</dd></dl>
   </button>
-  <button type="button" class="card" data-v="fifa" aria-label="Video abspielen: FIFA · Living Football">
+  <button type="button" class="card rv" data-v="fifa" aria-label="Video abspielen: FIFA · Living Football" style="--d: 0.08s;">
     <div class="frame has-img" style="--x:70%;--y:20%">
-      <img src="/video/fifa.jpg" alt="" loading="lazy" width="1280" height="720"><span class="shade"></span>
+      <img src="/video/fifa.jpg" alt="" loading="lazy" width="1280" height="720"><video class="pv" muted="" loop="" playsinline="" preload="none" data-src="/video/p-fifa.mp4" aria-hidden="true"></video><span class="shade"></span>
       <span class="tc">TC 02:00:00:00</span><span class="fmt">Studio-Serie</span>
       <span class="play" aria-hidden="true"></span>
       <span class="client">FIFA</span>
@@ -98,9 +102,9 @@
     <p>Konzeption und Aufbau des gesamten technischen Studio-Setups: fünf Broadcast-Kameras, Live-Schnitt, Grafik und Livestream für die globale Serie der FIFA.</p>
     <dl><dt>Rolle</dt><dd>Executive Producer · Producer · Technical Director · Director · Editor · Colourist</dd><dt>Umfang</dt><dd>36 Episoden à 40 Min. · 2 Staffeln · bis zu 2 Episoden pro Tag</dd></dl>
   </button>
-  <button type="button" class="card" data-v="ubs-gic" aria-label="Video abspielen: UBS · Group Internal Consulting">
+  <button type="button" class="card rv" data-v="ubs-gic" aria-label="Video abspielen: UBS · Group Internal Consulting" style="--d: 0.16s;">
     <div class="frame has-img" style="--x:20%;--y:80%">
-      <img src="/video/ubs-gic.jpg" alt="" loading="lazy" width="1280" height="720"><span class="shade"></span>
+      <img src="/video/ubs-gic.jpg" alt="" loading="lazy" width="1280" height="720"><video class="pv" muted="" loop="" playsinline="" preload="none" data-src="/video/p-ubs-gic.mp4" aria-hidden="true"></video><span class="shade"></span>
       <span class="tc">TC 03:00:00:00</span><span class="fmt">Employer Branding</span>
       <span class="play" aria-hidden="true"></span>
       <span class="client">UBS</span>
@@ -110,9 +114,9 @@
     <p>Humorvolle Rekrutierungskampagne: die Frustrationen externer Beratung gegenüber den Vorteilen einer internen Rolle bei der UBS. Gestaffelt lanciert auf Social Media und Website.</p>
     <dl><dt>Rolle</dt><dd>Executive Producer · Producer · Director · Concept</dd><dt>Umfang</dt><dd>Kampagne in 3 Teilen</dd><dt>Award</dt><dd>Rally Awards 2021: 1. Platz Paid Social, 2. Platz Video im Recruitment Marketing</dd></dl>
   </button>
-  <button type="button" class="card" data-v="ubs-coffee-stain" aria-label="Video abspielen: UBS · Coffee Stain">
+  <button type="button" class="card rv" data-v="ubs-coffee-stain" aria-label="Video abspielen: UBS · Coffee Stain" style="--d: 0.24s;">
     <div class="frame has-img" style="--x:80%;--y:60%">
-      <img src="/video/ubs-coffee-stain.jpg" alt="" loading="lazy" width="1280" height="720"><span class="shade"></span>
+      <img src="/video/ubs-coffee-stain.jpg" alt="" loading="lazy" width="1280" height="720"><video class="pv" muted="" loop="" playsinline="" preload="none" data-src="/video/p-ubs-coffee-stain.mp4" aria-hidden="true"></video><span class="shade"></span>
       <span class="tc">TC 04:00:00:00</span><span class="fmt">Employer Branding</span>
       <span class="play" aria-hidden="true"></span>
       <span class="client">UBS</span>
@@ -122,9 +126,9 @@
     <p>Vom Kaffeefleck am ersten Tag zur selbstbewussten Fachfrau: eine humorvolle Geschichte für die Lehrstellen der UBS.</p>
     <dl><dt>Rolle</dt><dd>Executive Producer · Producer · Concept · Director</dd><dt>Umfang</dt><dd>Website, Social Media und Filialen</dd></dl>
   </button>
-  <button type="button" class="card" data-v="siemens" aria-label="Video abspielen: Siemens · Shaping the Future Together">
+  <button type="button" class="card rv" data-v="siemens" aria-label="Video abspielen: Siemens · Shaping the Future Together" style="--d: 0.24s;">
     <div class="frame has-img" style="--x:40%;--y:70%">
-      <img src="/video/siemens.jpg" alt="" loading="lazy" width="1280" height="720"><span class="shade"></span>
+      <img src="/video/siemens.jpg" alt="" loading="lazy" width="1280" height="720"><video class="pv" muted="" loop="" playsinline="" preload="none" data-src="/video/p-siemens.mp4" aria-hidden="true"></video><span class="shade"></span>
       <span class="tc">TC 05:00:00:00</span><span class="fmt">Employer Branding</span>
       <span class="play" aria-hidden="true"></span>
       <span class="client">Siemens</span>
@@ -134,9 +138,9 @@
     <p>Multichannel-Kampagne, in der Mitarbeitende selbst die Hauptrolle spielen, ungescriptet und auf Schweizerdeutsch, zu fünf Themen: Arbeit, Diversität, Work-Life-Balance, Nachhaltigkeit und gesellschaftlicher Beitrag.</p>
     <dl><dt>Rolle</dt><dd>Executive Producer</dd><dt>Umfang</dt><dd>121 Videos und 98 Fotos · modular für Web und Social Media</dd></dl>
   </button>
-  <button type="button" class="card" data-v="meteomatics" aria-label="Video abspielen: Meteomatics · Produkt- &amp; Markenkampagne">
+  <button type="button" class="card rv" data-v="meteomatics" aria-label="Video abspielen: Meteomatics · Produkt- &amp; Markenkampagne" style="--d: 0.24s;">
     <div class="frame has-img" style="--x:75%;--y:75%">
-      <img src="/video/meteomatics.jpg" alt="" loading="lazy" width="1280" height="720"><span class="shade"></span>
+      <img src="/video/meteomatics.jpg" alt="" loading="lazy" width="1280" height="720"><video class="pv" muted="" loop="" playsinline="" preload="none" data-src="/video/p-meteomatics.mp4" aria-hidden="true"></video><span class="shade"></span>
       <span class="tc">TC 06:00:00:00</span><span class="fmt">Produktfilm</span>
       <span class="play" aria-hidden="true"></span>
       <span class="client">Meteomatics</span>
@@ -146,9 +150,9 @@
     <p>Fünfteilige Serie mit Drohnenaufnahmen sowie Kunden- und Mitarbeiterstimmen, gedreht an der ETH Zürich, bei BKW in Bern, bei Sunflower Labs und am Hauptsitz in St. Gallen.</p>
     <dl><dt>Rolle</dt><dd>Executive Producer · Producer · Director</dd><dt>Umfang</dt><dd>5 Filme · Versionen à 5 Min., 2 Min. und 30 Sek. · 3 Monate vom Konzept bis zur Post</dd></dl>
   </button>
-  <button type="button" class="card" data-v="porsche" aria-label="Video abspielen: Porsche · On the Road to Electromobility">
+  <button type="button" class="card rv" data-v="porsche" aria-label="Video abspielen: Porsche · On the Road to Electromobility" style="--d: 0.24s;">
     <div class="frame has-img" style="--x:25%;--y:30%">
-      <img src="/video/porsche.jpg" alt="" loading="lazy" width="1280" height="720"><span class="shade"></span>
+      <img src="/video/porsche.jpg" alt="" loading="lazy" width="1280" height="720"><video class="pv" muted="" loop="" playsinline="" preload="none" data-src="/video/p-porsche.mp4" aria-hidden="true"></video><span class="shade"></span>
       <span class="tc">TC 07:00:00:00</span><span class="fmt">Social-Kampagne</span>
       <span class="play" aria-hidden="true"></span>
       <span class="client">Porsche</span>
@@ -158,9 +162,9 @@
     <p>Für den Taycan Cross Turismo testet Fussballer Michael Lang über mehrere Monate das elektrische Fahren auf den Strassen von Basel.</p>
     <dl><dt>Rolle</dt><dd>Executive Producer · Producer · Director · Editor · Colourist</dd><dt>Umfang</dt><dd>Social-Serie über mehrere Monate</dd></dl>
   </button>
-  <button type="button" class="card" data-v="singularity" aria-label="Video abspielen: Singularity · Spielfilm · Netflix">
+  <button type="button" class="card rv" data-v="singularity" aria-label="Video abspielen: Singularity · Spielfilm · Netflix" style="--d: 0.24s;">
     <div class="frame has-img" style="--x:85%;--y:30%">
-      <img src="/video/singularity.jpg" alt="" loading="lazy" width="1280" height="720"><span class="shade"></span>
+      <img src="/video/singularity.jpg" alt="" loading="lazy" width="1280" height="720"><video class="pv" muted="" loop="" playsinline="" preload="none" data-src="/video/p-singularity.mp4" aria-hidden="true"></video><span class="shade"></span>
       <span class="tc">TC 08:00:00:00</span><span class="fmt">Spielfilm · 92 Min.</span>
       <span class="play" aria-hidden="true"></span>
       <span class="client">Singularity</span>
