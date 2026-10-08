@@ -90,13 +90,24 @@ document.getElementById("grid").addEventListener("click", e => {
   const p = projects.find(x => x.v === c.dataset.v); if (!p) return;
   document.getElementById("player-title").textContent = `${p.c} · ${p.t[lang]}`;
   document.getElementById("player-close").textContent = T[lang].close;
-  vid.poster = `/video/${p.v}.jpg`; vid.src = `/video/${p.v}.mp4`;
-  dlg.showModal(); vid.play().catch(() => {});
+  vid.poster = `/video/${p.v}.jpg`;
+  dlg.showModal();
+  loadVideo(`/video/${p.v}/index.m3u8`).then(() => vid.play().catch(() => {}));
 });
-const closePlayer = () => { vid.pause(); vid.removeAttribute("src"); vid.load(); if (dlg.open) dlg.close(); };
+let hls = null;
+const loadScript = src => new Promise((ok, no) => { if (window.Hls) return ok(); const t = document.createElement("script"); t.src = src; t.onload = ok; t.onerror = no; document.head.appendChild(t); });
+async function loadVideo(src){
+  if (hls) { hls.destroy(); hls = null; }
+  if (vid.canPlayType("application/vnd.apple.mpegurl")) { vid.src = src; return; }
+  await loadScript("/hls.light.min.js");
+  if (window.Hls && Hls.isSupported()) { hls = new Hls({ capLevelToPlayerSize: true }); hls.loadSource(src); hls.attachMedia(vid); }
+  else { vid.src = src; }
+}
+const stopVideo = () => { vid.pause(); if (hls) { hls.destroy(); hls = null; } vid.removeAttribute("src"); vid.load(); };
+const closePlayer = () => { stopVideo(); if (dlg.open) dlg.close(); };
 document.getElementById("player-close").addEventListener("click", closePlayer);
 dlg.addEventListener("click", e => { if (e.target === dlg) closePlayer(); });
-dlg.addEventListener("close", () => { vid.pause(); vid.removeAttribute("src"); vid.load(); });
+dlg.addEventListener("close", stopVideo);
 
 const _d = a => String.fromCharCode(...a.slice().reverse().map(n => n - 7));
 const _m = [116, 118, 106, 53, 115, 112, 104, 116, 110, 71, 117, 104, 112, 123, 122, 104, 105, 108, 122, 53, 104, 107, 108, 119, 108, 106], _t = [64, 59, 39, 61, 58, 39, 62, 62, 59, 39, 61, 62, 39, 56, 59, 50];

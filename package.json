@@ -1,0 +1,8 @@
+{
+  "name": "sebastiancepeda-com",
+  "private": true,
+  "description": "Static site, no build step. Cloudflare serves ./site (see wrangler.jsonc).",
+  "scripts": {
+    "build": "echo 'static site, nothing to build'"
+  }
+}
