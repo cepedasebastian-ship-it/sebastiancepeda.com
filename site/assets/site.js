@@ -7,7 +7,7 @@ const T = {
     p1:"years in production", p2n:"1,500+", p2:"productions delivered", p3:"people led on set", p4:"first Swiss feature film on Netflix",
     workEy:"Work", workH:"Selected work", workP:"Brand films, campaigns, documentaries and long-form productions.",
     bringEy:"Profile", bringH:"What I bring", bringP:"A filmmaker’s eye and a producer’s responsibility, in one person.",
-    b1h:"Creative judgement", b1p:"A filmmaker’s eye shaped by years behind the camera: concept, direction, cinematography, editing and colour grading.",
+    b1h:"Creative judgement", b1p:"A filmmaker’s eye, built through years of hands-on work in concept, direction, cinematography, editing and colour grading.",
     b2h:"Production leadership", b2p:"Teams, budgets, suppliers, schedules and delivery, from lean crews to productions with 150 people on set.",
     b3h:"Business thinking", b3p:"Keeping creative ambition, audience, budget and business objectives moving in the same direction.",
     b4h:"End-to-end ownership", b4p:"From brief and concept through pre-production, shoot, post and final delivery. One accountable lead.",
