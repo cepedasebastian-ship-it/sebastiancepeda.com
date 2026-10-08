@@ -1,12 +1,43 @@
-# Netlify deploy config — drag-and-drop or connect the repo, this is all you need.
+# Static site: everything that goes live is in /site (no build step).
 [build]
-  command = "npm run build"
-  publish = "dist"
+  publish = "site"
+  command = "echo 'static site, no build'"
 
-# Force the default *.netlify.app address to redirect to the real domain,
-# so only sebastiancepeda.com is used publicly.
+# Only sebastiancepeda.com is used publicly.
 [[redirects]]
   from = "https://sebastiancepedacom.netlify.app/*"
   to = "https://sebastiancepeda.com/:splat"
   status = 301
   force = true
+
+# Old URLs from the previous version of the site
+[[redirects]]
+  from = "/de/privacy/*"
+  to = "/de/datenschutz/"
+  status = 301
+[[redirects]]
+  from = "/es/*"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/en/*"
+  to = "/:splat"
+  status = 301
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    X-Frame-Options = "SAMEORIGIN"
+
+[[headers]]
+  for = "/video/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
