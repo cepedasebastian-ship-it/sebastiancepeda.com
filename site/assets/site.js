@@ -63,9 +63,8 @@ function renderGrid(l){
     <div class="frame${p.v ? " has-img" : ""}" style="--x:${p.x};--y:${p.y}">
       ${p.v ? `<img src="/video/${p.v}.jpg" alt="" loading="lazy" width="1280" height="720"><video class="pv" muted loop playsinline preload="none" data-src="/video/p-${p.v}.mp4" aria-hidden="true"></video><span class="shade"></span>` : ""}
       <span class="play" aria-hidden="true"></span>
-      <span class="client">${p.c}</span>
     </div>
-    <h3>${p.c} · ${p.t[l]}</h3>
+    <h3>${p.t[l]}</h3>
     <span class="meta">${p.f[l]}</span>
     <p>${p.d[l]}</p>
     <dl><dt>${T[l].role}</dt><dd>${p.role}</dd>${p.scale ? `<dt>${T[l].scale}</dt><dd>${p.scale[l]}</dd>` : ""}${p.award ? `<dt>${T[l].award}</dt><dd>${p.award[l]}</dd>` : ""}</dl>
@@ -87,7 +86,7 @@ const dlg = document.getElementById("player"), vid = document.getElementById("pl
 document.getElementById("grid").addEventListener("click", e => {
   const c = e.target.closest("button.card"); if (!c) return;
   const p = projects.find(x => x.v === c.dataset.v); if (!p) return;
-  document.getElementById("player-title").textContent = `${p.c} · ${p.t[lang]}`;
+  document.getElementById("player-title").textContent = p.t[lang];
   document.getElementById("player-close").textContent = T[lang].close;
   vid.poster = `/video/${p.v}.jpg`;
   dlg.showModal();
